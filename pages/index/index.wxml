@@ -1,0 +1,8 @@
+<!--pages/index/index.wxml-->
+<view class='indexContainer'>
+  <image src='{{userInfo.avatarUrl}}'></image>
+  <text class='indexUserName'>hello {{userInfo.nickName}}</text>
+  <view class='indexTitle' bindtap='gotoStudy'>
+    <text>开启小程序之旅</text>
+  </view>
+</view>

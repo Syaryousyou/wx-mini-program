@@ -1,0 +1,21 @@
+<!--pages/detail/detail.wxml-->
+<view class="detailContainer">
+  <image class="bigImg" src="{{isMusicPlay ? TargetListData.music.coverImgUrl : TargetListData.headImgSrc}}"/>
+  <image class="musicImg" catchtap="handleMusic" src="{{isMusicPlay ? '/images/music/music-start.png' : '/images/music/music-stop.png'}}"/>
+  <view class="avatar_date">
+    <image src="{{TargetListData.avatar}}"/>
+    <text>{{TargetListData.author}}</text>
+    <text>发布于</text>
+    <text>{{TargetListData.date}}</text>
+  </view>
+  <text class="title">{{TargetListData.title}}</text>
+  <view class="collection_share_container">
+    <view class="collection_share">
+      <image catchtap="handleCollected" src="{{isCollected ? '/images/icon/collection.png' : '/images/icon/collection-anti.png'}}"/>
+      <image catchtap="handleShare" src="/images/icon/share.png"/>
+    </view>
+    <view class="line"></view>
+  </view>
+  <button open-type="share">转发此文</button>
+  <text class="content">{{TargetListData.detail_content}}</text>
+</view>

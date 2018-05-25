@@ -1,0 +1,33 @@
+/* pages/index/index.wxss */
+page{
+  height: 100%;
+  background: #C5EFFF;
+}
+.indexContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+.indexContainer > image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rpx;
+  margin-top: 160rpx                       
+}
+.indexContainer > .indexUserName{
+  font-size: 32rpx;
+  font-weight: 700;
+  margin-top: 100rpx;
+}
+.indexContainer > .indexTitle{
+  border: 1px solid #405f80;
+  width: 200rpx;
+  height: 80rpx;
+  text-align: center;
+  margin-top: 200rpx;
+  border-radius: 10rpx;
+}
+.indexContainer > .indexTitle > text{
+  font-size: 24rpx;
+  line-height: 80rpx;
+}
