@@ -1,6 +1,7 @@
 App({
   data: {
     isPlay: false,
-    targetIndex: null
+    targetIndex: null,
+    movies: []
   }
 })

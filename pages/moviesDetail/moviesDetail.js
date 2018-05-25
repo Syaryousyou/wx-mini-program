@@ -1,42 +1,22 @@
-// pages/index/index.js
+// pages/moviesDetail/moviesDetail.js
+const appData = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    msg: '美丽的菇凉',
-    userInfo: {}
+    targetMv: {}
   },
-  gotoStudy () {
-    // wx.navigateTo({
-    //   url: '/pages/list/list',
-    //   success(){
-    //     console.log('跳转成功')
-    //   }
-    // })
-    // wx.redirectTo({
-    //   url: '/pages/list/list',
-    //   success () {
-    //     console.log('跳转成功')
-    //   }
-    // })
-    wx.switchTab({
-      url: '/pages/list/list'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.getUserInfo({
-      success:(data) => {
-        console.log(this)
-        // console.log(data.userInfo)
-        this.setData({
-          userInfo: data.userInfo
-        })
-      }
+    const {index} = options
+    const targetMv = appData.data.movies[index]
+    this.setData({
+      targetMv
     })
   },
 

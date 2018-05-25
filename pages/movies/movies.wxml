@@ -1,12 +1,14 @@
 <!--pages/movies/movies.wxml-->
 <view wx:for="{{movies}}" wx:key="index">
-  <view class="moviesContainer">
-    <image src="{{item.images.large}}"/>
-    <view class="content">
-      <text class="movie_name">{{item.title}}</text>
-      <text class="movie_year">年份：{{item.year}}</text>
-      <text class="movie_director">导演：{{item.directors[0].name}}</text>
+  <navigator url="/pages/moviesDetail/moviesDetail?index={{index}}">
+    <view class="moviesContainer">
+      <image src="{{item.images.large}}"/>
+      <view class="content">
+        <text class="movie_name">{{item.title}}</text>
+        <text class="movie_year">年份：{{item.year}}</text>
+        <text class="movie_director">导演：{{item.directors[0].name}}</text>
+      </view>
+      <text class="movie_rating">{{item.rating.average}}</text>
     </view>
-    <text class="movie_rating">{{item.rating.average}}</text>
-  </view>
+  </navigator>
 </view>

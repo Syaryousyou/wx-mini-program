@@ -1,5 +1,6 @@
 // pages/movies/movies.js
 const MOVIE_URL = 'http://t.yushu.im/v2/movie/top250';
+const appData = getApp()
 Page({
 
   /**
@@ -20,6 +21,7 @@ Page({
         this.setData({
           movies
         })
+        appData.data.movies = movies
       }
     })
   },
